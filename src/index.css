@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #031A14;
+    color: #F1F5F9;
+    antialiased: true;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', 'Outfit', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Futuristic Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #01120D;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 208, 132, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(103, 245, 194, 0.6);
+}
+
+/* Premium Glassmorphic Panels */
+.glass-futuristic {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-futuristic-emerald {
+  background: rgba(0, 208, 132, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 208, 132, 0.25);
+  box-shadow: 0 0 25px rgba(0, 208, 132, 0.15);
+}
+
+.glass-futuristic-dark {
+  background: rgba(1, 18, 13, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Subtle Grid Background Overlay */
+.digital-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 208, 132, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 208, 132, 0.05) 1px, transparent 1px);
+}
+
+.radial-vignette {
+  background: radial-gradient(circle at 50% 30%, transparent 40%, #031A14 90%);
+}
+
+/* Text Glows */
+.text-glow-emerald {
+  text-shadow: 0 0 20px rgba(0, 208, 132, 0.6);
+}
+
+.text-glow-mint {
+  text-shadow: 0 0 25px rgba(103, 245, 194, 0.7);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+}
+
+/* Radar Sweep */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar-sweep {
+  animation: radar-sweep 4s linear infinite;
+}
+
+/* Data Stream Pulse */
+@keyframes pulse-beam {
+  0% { opacity: 0.2; stroke-dashoffset: 100; }
+  50% { opacity: 0.9; }
+  100% { opacity: 0.2; stroke-dashoffset: 0; }
+}
+
+.animate-data-beam {
+  stroke-dasharray: 10, 15;
+  animation: pulse-beam 2.5s linear infinite;
+}
